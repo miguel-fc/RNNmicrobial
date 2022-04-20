@@ -1,0 +1,2 @@
+# Exclude dataset files (too large individually)
+*.npz

@@ -1,0 +1,258 @@
+Setting up [LPIPS] perceptual loss: trunk [alex], v[0.1], spatial [off]
+Loading model from: /home/connor/miniconda3/envs/scgsr/lib/python3.8/site-packages/lpips/weights/v0.1/alex.pth
+Namespace(batch_size=8, dataset_name='mnist', decouple_beta=0.1, device='cuda', display_interval=100, filter_size=5, gen_frm_dir='/home/connor/GDrive/SCGSR/papers/RNNmicrobial/results/images/wells-1_microns-30_interp-20-32-32_hsv_layers-32_lr-0.0003', img_channel=3, img_width=32, input_length=10, is_training=1, layer_norm=0, lr=0.0003, max_iterations=500, model_name='predrnn', n_gpu=1, num_hidden='32,32,32,32', num_save_samples=10, patch_size=4, pretrained_model='', r_exp_alpha=5000, r_sampling_step_1=25000, r_sampling_step_2=50000, reverse_input=1, reverse_scheduled_sampling=0, sampling_changing_rate=2e-05, sampling_start_value=1.0, sampling_stop_iter=50000, save_dir='/home/connor/GDrive/SCGSR/papers/RNNmicrobial/results/prnn-checkpoints/wells-1_microns-30_interp-20-32-32_hsv_layers-32_lr-0.0003', scheduled_sampling=1, snapshot_interval=100, stride=1, test_interval=100, total_length=20, train_data_paths='/home/connor/GDrive/SCGSR/papers/RNNmicrobial/datasets/wells-1_microns-30_interp-20-32-32_hsv-train.npz', valid_data_paths='/home/connor/GDrive/SCGSR/papers/RNNmicrobial/datasets/wells-1_microns-30_interp-20-32-32_hsv-valid.npz', visual=0, visual_path='./decoupling_visual')
+Initializing models
+clips
+(2, 70, 2)
+dims
+(1, 3)
+input_raw_data
+(1400, 3, 32, 32)
+clips
+(2, 281, 2)
+dims
+(1, 3)
+input_raw_data
+(5620, 3, 32, 32)
+2022-04-19 17:06:55 itr: 100
+training loss: 0.010312173515558243
+save model to /home/connor/GDrive/SCGSR/papers/RNNmicrobial/results/prnn-checkpoints/wells-1_microns-30_interp-20-32-32_hsv_layers-32_lr-0.0003/model.ckpt-100
+2022-04-19 17:06:55 test...
+/home/connor/GDrive/SCGSR/connor_to_miguel/predrnn-pytorch/core/trainer.py:109: FutureWarning: `multichannel` is a deprecated argument name for `structural_similarity`. It will be removed in version 1.0. Please use `channel_axis` instead.
+  score, _ = structural_similarity(pred_frm[b], real_frm[b], full=True, multichannel=True)
+mse per seq: 369.5438117980957
+24.542651176452637
+25.398439645767212
+27.97525668144226
+30.438718795776367
+31.626487731933594
+34.93585968017578
+39.909905433654785
+42.833266735076904
+48.43912601470947
+63.44409990310669
+ssim per frame: 0.3888138
+0.40305138
+0.4056111
+0.40042454
+0.3968012
+0.39591524
+0.38845855
+0.38265797
+0.3810898
+0.37401214
+0.36011598
+psnr per frame: 19.525278
+21.14916
+20.993452
+20.570995
+20.198313
+20.010052
+19.567383
+18.98723
+18.674845
+18.136452
+16.964897
+lpips per frame: 0.025024962
+0.018952388
+0.020027101
+0.022491597
+0.024160568
+0.023996808
+0.025553161
+0.027659394
+0.027103484
+0.028214915
+0.032090195
+2022-04-19 17:07:14 itr: 200
+training loss: 0.006149748340249062
+save model to /home/connor/GDrive/SCGSR/papers/RNNmicrobial/results/prnn-checkpoints/wells-1_microns-30_interp-20-32-32_hsv_layers-32_lr-0.0003/model.ckpt-200
+2022-04-19 17:07:14 test...
+mse per seq: 250.11337733268738
+16.86500120162964
+17.48474645614624
+19.84744358062744
+21.84663677215576
+22.081948041915894
+24.239874839782715
+27.672975301742554
+28.16697382926941
+30.523101329803467
+41.38467597961426
+ssim per frame: 0.48807055
+0.52216405
+0.52900994
+0.51947457
+0.51016074
+0.5042199
+0.48728976
+0.47112006
+0.46195126
+0.44810638
+0.42720905
+psnr per frame: 21.237843
+22.850185
+22.686365
+22.131916
+21.702599
+21.632214
+21.206556
+20.618366
+20.527695
+20.164736
+18.857792
+lpips per frame: 0.0155840395
+0.009609584
+0.010508564
+0.013032093
+0.014869429
+0.014769119
+0.016351415
+0.018515427
+0.017839262
+0.01853905
+0.021806454
+2022-04-19 17:07:34 itr: 300
+training loss: 0.004541077651083469
+save model to /home/connor/GDrive/SCGSR/papers/RNNmicrobial/results/prnn-checkpoints/wells-1_microns-30_interp-20-32-32_hsv_layers-32_lr-0.0003/model.ckpt-300
+2022-04-19 17:07:34 test...
+mse per seq: 286.93432354927063
+12.267372012138367
+13.543898582458496
+16.984532713890076
+20.19610571861267
+21.885687589645386
+26.112887382507324
+32.39888906478882
+37.056278228759766
+44.65344762802124
+61.835224628448486
+ssim per frame: 0.5284989
+0.59531736
+0.5938273
+0.571646
+0.55298245
+0.5434762
+0.5218942
+0.5004109
+0.48878214
+0.4717274
+0.44492504
+psnr per frame: 21.031885
+24.355755
+23.872128
+22.831903
+22.034199
+21.642748
+20.83952
+19.8848
+19.295107
+18.48215
+17.08053
+lpips per frame: 0.01572803
+0.006762267
+0.008201709
+0.011237463
+0.013687559
+0.014222427
+0.016418427
+0.019272063
+0.019468172
+0.021428104
+0.026582107
+2022-04-19 17:07:54 itr: 400
+training loss: 0.0033172944094985723
+save model to /home/connor/GDrive/SCGSR/papers/RNNmicrobial/results/prnn-checkpoints/wells-1_microns-30_interp-20-32-32_hsv_layers-32_lr-0.0003/model.ckpt-400
+2022-04-19 17:07:54 test...
+mse per seq: 280.73869705200195
+9.67111623287201
+11.806145310401917
+16.753765106201172
+21.933907747268677
+25.269997358322144
+31.365293979644775
+38.06326627731323
+38.68515205383301
+39.44081735610962
+47.7492356300354
+ssim per frame: 0.54492056
+0.6875397
+0.65916306
+0.6116661
+0.57428813
+0.55197775
+0.5143616
+0.48166373
+0.46914363
+0.45772937
+0.4416726
+psnr per frame: 21.152367
+25.550287
+24.513556
+22.880219
+21.680065
+21.038288
+20.07941
+19.227757
+19.167618
+19.10117
+18.285288
+lpips per frame: 0.014216164
+0.0047820755
+0.0063533103
+0.009301528
+0.011951739
+0.013199261
+0.016085636
+0.019288328
+0.019100219
+0.019565467
+0.022534078
+2022-04-19 17:08:14 itr: 500
+training loss: 0.0030027786269783974
+save model to /home/connor/GDrive/SCGSR/papers/RNNmicrobial/results/prnn-checkpoints/wells-1_microns-30_interp-20-32-32_hsv_layers-32_lr-0.0003/model.ckpt-500
+2022-04-19 17:08:14 test...
+mse per seq: 267.90984976291656
+7.917837977409363
+10.10844349861145
+14.791954278945923
+19.43380069732666
+22.563507318496704
+27.812766551971436
+33.76071262359619
+37.191407203674316
+41.40385341644287
+52.92556619644165
+ssim per frame: 0.56684995
+0.71658164
+0.67560077
+0.6246843
+0.58883995
+0.56953585
+0.5404009
+0.5132584
+0.49999592
+0.48232752
+0.45727462
+psnr per frame: 21.495148
+26.550997
+25.23502
+23.422554
+22.162424
+21.482563
+20.553432
+19.708158
+19.27773
+18.80608
+17.752514
+lpips per frame: 0.010225096
+0.0036025818
+0.0047762753
+0.0071298834
+0.008882149
+0.009022169
+0.010589921
+0.012768732
+0.012879193
+0.01424865
+0.018351408
